@@ -9,7 +9,7 @@ Goals
 * Move monitoring configuration out of SCOM making it easier for application SMEs to ‘own’ their monitoring
 * Reduce the complexity and time to deploy monitoring
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application
-# What does that look like… an example Windows Service monitoring
+# An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
 With the SMF, the SME creates a set of registry keys on the servers where the service needs to be monitored describing which Windows service to monitor, when to monitor it, what priority/severity the alerts should be, the team that alerts should be routed to, and which business service the Windows service is part of. SCOM discoveries run and discovery the Windows Service to be monitored along with it’s configuration starts monitoring it and adds it to the required business service (and discovers the business service). Zero requirement for the SCOM SME to be involved. 
 If creating registry keys and CSVs sounds like too much work for your application SMEs then to help get started I’ve created SCOM agent tasks that create the keys and CSVs with overridden information. But I really try to push the ownership to the SMEs. The less work I have to do the better! 
