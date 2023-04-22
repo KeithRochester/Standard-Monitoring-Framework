@@ -28,13 +28,13 @@ All SMF monitored objects have these common base properties.
 * Schedule Start Time – Time to start monitoring i.e. 00:00 or 09:00 etc…
 * Schedule End Time – Time to stop monitoring i.e. 23:59 or 17:00
 * Schedule Days – bitmask for the days of the week to run monitoring i.e. 127 or 7 days 62 for Monday to Friday
-* * Sunday = 1
-* * Monday = 2
-* * Tuesday = 4
-* * Wednesday = 8
-* * Thursday = 16
-* * Friday = 32
-* * Saturday = 64
+  * Sunday = 1
+  * Monday = 2
+  * Tuesday = 4
+  * Wednesday = 8
+  * Thursday = 16
+  * Friday = 32
+  * Saturday = 64
 * Match Count – How many consecutive unhealthy samples needed before it’s unhealthy
 * Severity – Severity of alerts generated and health state of monitor
 * Priority – Priority of alerts generated
@@ -43,45 +43,45 @@ All SMF monitored objects have these common base properties.
 # What can be monitored right now
 (I have a list of other monitoring to add and am open to suggestions to be added)
 * Windows Service 
-* * Service is running… recovery to start if automatically if required
+  * Service is running… recovery to start if automatically if required
 * Windows Scheduled Tasks
-* * Is the Task enabled
-* * Last result
-* * Run duration
-* * Time since last run
+  * Is the Task enabled
+  * Last result
+  * Run duration
+  * Time since last run
 * OLEDB Connections and Queries (Windows Watcher)
-* * Connection is successful
-* * Value in the specified row/column of the result set is within thresholds
-* * Supports Windows and Local Authentication
+  * Connection is successful
+  * Value in the specified row/column of the result set is within thresholds
+  * Supports Windows and Local Authentication
 * URL (Windows Watcher)
-* * The same monitors as the out of the box Web Application Transaction Monitoring template
-* * Windows Event Log
-* * Repeated
-* * Missing
-* * Event reset
-* * Time reset
+  * The same monitors as the out of the box Web Application Transaction Monitoring template
+  * Windows Event Log
+  * Repeated
+  * Missing
+  * Event reset
+  * Time reset
 * Windows Files
-* * Count of files older/younger than threshold above or below threshold
-* * Count of files smaller/larger than threshold above or below threshold
-* * Count of files above or below threshold
+  * Count of files older/younger than threshold above or below threshold
+  * Count of files smaller/larger than threshold above or below threshold
+  * Count of files above or below threshold
 * Windows Folder
-* * Count folders older/younger than threshold above or below threshold
+  * Count folders older/younger than threshold above or below threshold
 * Linux Log File
-* * Regex is matched in file(s) time reset (tracks previously read lines)
+  * Regex is matched in file(s) time reset (tracks previously read lines)
 * Linux Process
-* * Count of process instances within thresholds
-* * Percent CPU busy time is below threshold
-* * Used Memory KB is below threshold
+  * Count of process instances within thresholds
+  * Percent CPU busy time is below threshold
+  * Used Memory KB is below threshold
 * Port (Linux Watcher)
-* * Connection to port remote or local
+  * Connection to port remote or local
 * Windows Command – monitor any Windows command
-* * Returncode
-* * Regular expression match stdout
-* * Stdout is between thresholds
+  * Returncode
+  * Regular expression match stdout
+  * Stdout is between thresholds
 * Linux Command
-* * Returncode
-* * Regular expression match stdout
-* * Stdout is between thresholds
+  * Returncode
+  * Regular expression match stdout
+  * Stdout is between thresholds
 
 Those last two are really powerful and are used like Swiss Army Knives for monitoring.
 # Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
