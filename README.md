@@ -55,7 +55,7 @@ All SMF monitored objects have these common base properties.
   * Supports Windows and Local Authentication
 * URL (Windows Watcher)
   * The same monitors as the out of the box Web Application Transaction Monitoring template
-  * Windows Event Log
+* Windows Event Log
   * Repeated
   * Missing
   * Event reset
