@@ -1,5 +1,5 @@
 # **Introduction to the Standard Monitoring Framework (SMF)**
-For a while now I’ve been helping customers implement standardised monitoring in various guises. These management packs help demonstrate the principle. They can be used as a starting point for implementing your own standard monitoring. The MPs have been put together in my spare time which means they have had limited testing, they should work in your environment, but I can’t be 100% certain for all the supported Unix/Linux distros. Solaris taught me not to assume what works on RHEL works everywhere ☹ 
+For a while now I’ve been helping customers implement standardised monitoring in various guises. These management packs help demonstrate the principle. They can be used as a starting point for implementing your own standard monitoring. The MPs have been put together in my spare time which means they have had limited testing, they should work in your environment, but I can’t be 100% certain for all the supported Unix/Linux distros. Solaris taught me not to assume what works on RHEL works everywhere. ☹ 
 # **History**
 The idea for the SMF came from the great work that people like Russ Slaten and Tyson Paul have done on creating monitoring from configuration files. They both have created MPs that monitor ‘stuff’ by reading/discovering configuration from files. I liked the work they had done, to allow the easy creation of port and URL monitoring without having to use authoring tools, so much I decided to try and apply the same principle to as much monitoring as possible. 
 
@@ -102,7 +102,7 @@ All SMF monitored objects have these common base properties.
   * Regular expression match stdout
   * Stdout is between thresholds
 
-Those last two are really powerful and are used like Swiss Army Knives for monitoring.
+Those last two are really powerful and are used like Swiss Army Knives for monitoring. Invariably application SMEs will have admin scripts or executables that we can use to monitor health. By not embeding them into SCOM MPs we can leave the maintenace of them to the application SMEs. Less work for the SCOM SME! 😊
 # Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
 By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for 
 * Windows Server OS
