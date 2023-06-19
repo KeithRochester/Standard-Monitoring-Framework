@@ -12,10 +12,11 @@ The idea for the SMF came from the great work that people like Russ Slaten and T
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application
 * Monitoring is added to a Business Service for dashboarding/reporting
 * Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
+* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occuring that we don't currently have monitoring for)
   
 # An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
-With the SMF, the SME creates a set of registry keys on the servers where the service needs to be monitored describing which Windows service to monitor, when to monitor it, what priority/severity the alerts should be, the team that alerts should be routed to, and which business service the Windows service is part of. SCOM discoveries run and discovery the Windows Service to be monitored along with it’s configuration starts monitoring it and adds it to the required business service (and discovers the business service). Zero requirement for the SCOM SME to be involved. 
+With the SMF, the SME creates a set of registry keys on the servers where the service needs to be monitored describing which Windows service to monitor, when to monitor it, what priority/severity the alerts should be, the team that alerts should be routed to, and which business service the Windows service is part of. SCOM discoveries run and discovery the Windows Service to be monitored along with it’s configuration, starts monitoring it, and adds it to the required business service (and discovers the business service). Zero requirement for the SCOM SME to be involved. 
 If creating registry keys and CSVs sounds like too much work for your application SMEs then to help get started I’ve created SCOM agent tasks that create the keys and CSVs with overridden information. But I really try to push the ownership to the SMEs. The less work I have to do the better! 
 
 **_DANGER WILL ROBINSON_**
@@ -58,7 +59,21 @@ All SMF monitored objects have these common base properties.
   * Value in the specified row/column of the result set is within thresholds
   * Supports Windows and Local Authentication
 * URL (Windows Watcher)
-  * The same monitors as the out of the box Web Application Transaction Monitoring template
+  * CA Trusted
+  * Certificate Expired
+  * Certiifcate Expiring
+  * Certificate Invalid
+  * Content
+  * DNS Resolution
+  * Error Code
+  * Reachable
+  * Response Time
+  * Status Code
+* Remote Certificate (Windows Watcher)
+  * CN Valid
+  * CA Trusted
+  * Certifcate Expired
+  * Certifcate Expiring
 * Windows Event Log
   * Repeated
   * Missing
