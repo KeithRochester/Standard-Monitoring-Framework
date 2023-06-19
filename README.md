@@ -2,7 +2,8 @@
 For a while now I’ve been helping customers implement standardised monitoring in various guises. These management packs help demonstrate the principle. They can be used as a starting point for implementing your own standard monitoring. The MPs have been put together in my spare time which means they have had limited testing, they should work in your environment, but I can’t be 100% certain for all the supported Unix/Linux distros. Solaris taught me not to assume what works on RHEL works everywhere ☹ 
 # **History**
 The idea for the SMF came from the great work that people like Russ Slaten and Tyson Paul have done on creating monitoring from configuration files. They both have created MPs that monitor ‘stuff’ by reading/discovering configuration from files. I liked the work they had done, to allow the easy creation of port and URL monitoring without having to use authoring tools, so much I decided to try and apply the same principle to as much monitoring as possible. 
-Goals
+
+# Goals
 * Set of standardise monitors that target discovered objects
 * Configuration of monitoring stored as properties of objects
 * SCOM objects discovered based on registry keys on Windows and CSVs on Unix/Linux
@@ -10,7 +11,7 @@ Goals
 * Reduce the complexity and time to deploy monitoring
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application
 * Monitoring is added to a Business Service for dashboarding/reporting
-* Alerts have owner set based on object property (Can be disabled/delay to avoid conflict with other alert routing processes)
+* Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
   
 # An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
