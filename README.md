@@ -25,14 +25,14 @@ If creating registry keys and CSVs sounds like too much work for your applicatio
 
 # _Common Properties_
 All SMF monitored objects have these common base properties. 
-* Business Service –Business Service the object is part of
+* Business Service – Business Service the object is part of.
 * Component – Component the object is part of i.e. back end servers. Components are contained by Business Services and health rolls up. 
-* Environment –  Environment that the object is part of
-* Team – Team that alerts will be routed to
-* Frequency – How often to run the monitoring
-* Schedule Start Time – Time to start monitoring i.e. 00:00 or 09:00 etc…
-* Schedule End Time – Time to stop monitoring i.e. 23:59 or 17:00
-* Schedule Days – bitmask for the days of the week to run monitoring i.e. 127 or 7 days 62 for Monday to Friday
+* Environment –  Environment that the object is part of.
+* Team – Team that alerts will be routed to.
+* Frequency – How often to run the monitoring.
+* Schedule Start Time – Time to start monitoring i.e. 00:00 or 09:00 etc...
+* Schedule End Time – Time to stop monitoring i.e. 23:59 or 17:00 etc...
+* Schedule Days – Bitmask for the days of the week to run monitoring i.e. 127 or 7 days 62 for Monday to Friday.
   * Sunday = 1
   * Monday = 2
   * Tuesday = 4
@@ -40,13 +40,13 @@ All SMF monitored objects have these common base properties.
   * Thursday = 16
   * Friday = 32
   * Saturday = 64
-* Match Count – How many consecutive unhealthy samples needed before it’s unhealthy
-* Severity – Severity of alerts generated and health state of monitor
-* Priority – Priority of alerts generated
-* Description – description of monitoring, will be included in alert description
-* Documentation – Link to documentation, link will be included in alert description
+* Match Count – How many consecutive unhealthy samples needed before it’s unhealthy.
+* Severity – Severity of alerts generated and health state of monitor.
+* Priority – Priority of alerts generated.
+* Description – description of monitoring, will be included in alert description.
+* Documentation – Link to documentation, link will be included in alert description.
 # What can be monitored right now
-(I have a list of other monitoring to add and am open to suggestions to be added)
+(I am open to suggestions to be added)
 * Windows Service 
   * Service is running… recovery to start if automatically if required
 * Windows Scheduled Tasks
