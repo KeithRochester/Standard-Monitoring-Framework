@@ -9,7 +9,7 @@ The idea for the SMF came from the great work that people like Russ Slaten and T
 * SCOM objects discovered based on registry keys on Windows and CSVs on Unix/Linux
 * Move monitoring configuration out of SCOM making it easier for application SMEs to ‘own’ their monitoring
 * Reduce the complexity and time to deploy monitoring
-* Monitoring configuration becomes part of the application configuration and owned/deployed by application
+* Monitoring configuration becomes part of the application configuration and owned/deployed by application SMEs
 * Monitoring is added to a Business Service for dashboarding/reporting
 * Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
 * Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occuring that we don't currently have monitoring for)
