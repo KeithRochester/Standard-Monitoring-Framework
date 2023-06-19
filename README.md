@@ -12,7 +12,7 @@ The idea for the SMF came from the great work that people like Russ Slaten and T
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application SMEs
 * Monitoring is added to a Business Service for dashboarding/reporting
 * Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
-* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occuring that we don't currently have monitoring for)
+* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occuring that we don't currently **yet** have monitoring for)
   
 # An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
