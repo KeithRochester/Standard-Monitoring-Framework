@@ -9,6 +9,9 @@ Goals
 * Move monitoring configuration out of SCOM making it easier for application SMEs to ‘own’ their monitoring
 * Reduce the complexity and time to deploy monitoring
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application
+* Monitoring is added to a Business Service for dashboarding/reporting
+* Alerts have owner set based on object property (Can be disabled/delay to avoid conflict with other alert routing processes)
+  
 # An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
 With the SMF, the SME creates a set of registry keys on the servers where the service needs to be monitored describing which Windows service to monitor, when to monitor it, what priority/severity the alerts should be, the team that alerts should be routed to, and which business service the Windows service is part of. SCOM discoveries run and discovery the Windows Service to be monitored along with it’s configuration starts monitoring it and adds it to the required business service (and discovers the business service). Zero requirement for the SCOM SME to be involved. 
@@ -93,7 +96,9 @@ By setting the required registry keys and CSV entries it’s possible to include
 * Microsoft SQL on Windows Database
 * Windows Cluster
 * Windows Cluster Resource Group
-When I get time I’ll add other common objects such as IIS servers and sites as well as generic objects. 
+* Any Object - Requires the ObjectId of the object making it slightly more complex to add
+  
+When I get time I’ll add other common objects such as IIS servers, websites, application pools etc...  
 # What does it look like
 I’ll add some screenshots from the SCOM console and I’m creating a dashboard/perspective pack for SquaredUp
 # What’s Next
