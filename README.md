@@ -58,7 +58,21 @@ All SMF monitored objects have these common base properties.
   * Value in the specified row/column of the result set is within thresholds
   * Supports Windows and Local Authentication
 * URL (Windows Watcher)
-  * The same monitors as the out of the box Web Application Transaction Monitoring template
+  * CA Trusted
+  * Certificate Expired
+  * Certiifcate Expiring
+  * Certificate Invalid
+  * Content
+  * DNS Resolution
+  * Error Code
+  * Reachable
+  * Response Time
+  * Status Code
+* Remote Certificate (Windows Watcher)
+  * CN Valid
+  * CA Trusted
+  * Certifcate Expired
+  * Certifcate Expiring
 * Windows Event Log
   * Repeated
   * Missing
