@@ -11,11 +11,11 @@ In this example I'll use the Standard Monitoring Framework SCOM agent tasks to c
 |Business Server|WMS|
 |Environment|Production|
 
-# Goal 
+## Goal 
 
 ![Business Services Diagram View](./Screencaps/SCOM%20Task%20Deployment%20Example%20015.png)
 
-# Steps
+## Steps
 
 > The tasks are in optional MPs (Standard.Monitoring.Framework.Windows.Tasks and Standard.Monitoring.Framework.Linux.Tasks) because if your operator roles are not scoped correctly and health services not locked down they could be used to escalate an operators access to the monitored environment. Make sure you understand the risk before importing these MPs.
 
