@@ -104,7 +104,7 @@ All SMF monitored objects have these common base properties.
 
 Those last two are really powerful and are used like Swiss Army Knives for monitoring. Invariably application SMEs will have admin scripts or executables that we can use to monitor health. By not embeding them into SCOM MPs we can leave the maintenace of them to the application SMEs. Less work for the SCOM SME! 😊
 ## Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
-By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for 
+By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for: 
 * Windows Server OS
 * Linux OS
 * Health Service Watcher
@@ -118,7 +118,7 @@ When I get time I’ll add other common objects such as IIS servers, websites, a
 ## What does it look like
 I’ll add some screenshots from the SCOM console and I’m creating a dashboard/perspective pack for SquaredUp
 ## What’s Next
-Create some example registry keys and CSVs, create a quick start guide, and then start to work through the features and improvements back log…. 
+Create some example registry keys and CSVs, create a quick start guide, and then start to work through the features and improvements back log… 
 
 Any suggestions/feedback gratefully received or if you want to help improve/fix the MPs get in touch. 
 
