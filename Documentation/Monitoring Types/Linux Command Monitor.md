@@ -15,7 +15,7 @@ Can also collect the number returned by StdOut as a performance counter for repo
 
 To add a Linux Command Monitor...
 
-* Create/update **/etc/opt/smf/scom/discovery/linuxcommand** on the agent that will execute the command.
+* Create/update **/etc/opt/smf/scom/discovery/linuxcommand** on the agent that will execute the command. [Example CSV](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/linuxcommand.csv)
 * Use the **'SMF: Add Command Monitor'**.
 
 ## Linux Command Properties 
