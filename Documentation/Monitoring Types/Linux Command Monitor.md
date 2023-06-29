@@ -1,5 +1,3 @@
-
-﻿
 # Linux Command Monitor
 Used to monitor or collect the output from a Linux Command/Script. 
 
