@@ -1,3 +1,4 @@
+
 ﻿
 # Linux Command Executor
 Used to monitor or collect the output from a Linux Command/Script. 
@@ -36,7 +37,7 @@ Can also collect the number returned by StdOut as a performance counter for repo
 |Match Count|The number of consecutive samples that must occur before the monitor is unhealthy|
 |Schedule Start Time|Time of day that monitoring will run from e.g. 00:00, 08:00, etc...|
 |Schedule End Time|Time of day that monitoring will stop running e.g. 23:59, 17:00, etc...|
-|Schedule Days|Bit mask for the days of the week that monitoring should run|
+|Schedule Days|Bit mask for the days of the week that monitoring should run<br>Sunday = 1<br>  Monday = 2 <br>Tuesday = 4<br>Wednesday = 8<br>Thursday = 16<br>Friday = 32<br>Saturday = 64<br><br>Sunday to Saturday = 127<br>Monday to Friday = 62.|
 |Description|Description of the object being monitored. This text is included in the alert body|
 |Severity|Severity or alerts and state on dashboards. Critical or Warning|
 |Priority|Priority that alerts will be assigned. High, Medium, or Low|
