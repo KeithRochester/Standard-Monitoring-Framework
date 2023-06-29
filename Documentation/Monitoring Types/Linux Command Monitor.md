@@ -1,18 +1,24 @@
 
 ﻿
-# Linux Command Executor
+# Linux Command Monitor
 Used to monitor or collect the output from a Linux Command/Script. 
 
 Can monitor:
 	    
 * StdOut as string and look for a regular expression match to indicate if the object is healthy or not.
 * StdOut as number and confirm value is between minimum and maximum values.
-* Return Code is the expected value
+* Return Code is the expected value.
 
 Can also collect the number returned by StdOut as a performance counter for reporting and dashboards.
-		  
 
-## Linux Command Executor Properties 
+## Adding Monitoring
+
+To add a Linux Command Monitor...
+
+* Create/update **/etc/opt/smf/scom/discovery/linuxcommand** on the agent that will execute the command.
+* Use the **'SMF: Add Command Monitor'**.
+
+## Linux Command Properties 
 |Property|Description|
 |-|-|
 |Command|The command or script that SCOM will execute|
