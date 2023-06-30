@@ -118,7 +118,7 @@ When I get time I’ll add other common objects such as IIS servers, websites, a
 ## What does it look like
 The screen capture below shows the diagram view for a simple Business Service created using the SMF.
 
-![Business Services Diagram View](./Screencaps/Example%20Business%20Service.png)
+![Business Services Diagram View](../Documentation/Screencaps/Example%20Business%20Service.png)
 
 ## What’s Next
 Create some example registry keys and CSVs, create a quick start guide, and then start to work through the features and improvements back log… 
