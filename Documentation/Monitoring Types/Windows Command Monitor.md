@@ -17,6 +17,9 @@ To add a Windows Command Monitor...
 * Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsCommand** on the agent that will execute the command. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsCommand.Reg)
 * Use the **SMF: Add Command Monitor** task.
 
+## Run As Account
+If the agents default action account doesn't have the required access to run the command a Windows run as account can be added to the **Standard Monitoring Framework Windows Command Monitoring Profile** run as profile.  
+
 ## Windows Command Properties 
 
 |Property|Description|
