@@ -25,18 +25,18 @@ To add a Linux Process Monitor...
 
 |Property|Description|
 |-|-|
-|Process Name||
-|Arguments Filter Expression||
-|Minimum number of Instances||
-|Maximum number of Instances||
-|Maximum Percent Busy Time||
-|Maximum Used Memory KBytes||
-|Monitor Percent Busy Time||
-|Collect Percent Busy Time||
-|Monitor Used Memory KBytes||
-|Collect Used Memory KBytes||
-|Monitor Instance Count||
-|Collect Instance Count||
+|Process Name|Name of the process to be monitored|
+|Arguments Filter Expression|Arguments filter to use to identify the process to be monitored(Optional)|
+|Minimum Instances|Minimum number of process instances|
+|Maximum Instance|Maximum number of process instances|
+|Monitor Percent Busy Time|Controls if the percent busy time for the process should be monitored|
+|Collect Percent Busy Time|Controls if the percent busy time for the process should be collected for reporting/dashboards|
+|Monitor Used Memory KBytes|Controls if the Used Memory KBytes for the process should be monitored|
+|Maximum Percent Busy Time|Maximum Percent Busy Time|
+|Maximum Used Memory KBytes|Maximum Used Memory KBytes|
+|Collect Used Memory KBytes|Controls if the Used Memory KBytes for the process should be collected for reporting/dashboards|
+|Monitor Instance Count|Controls if the instance count for the process should be monitored|
+|Collect Instance Count|Controls if the instance count for the process should be collected for reporting/dashboards|
 
 ## General Properties
 
