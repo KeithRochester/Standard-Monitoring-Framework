@@ -20,13 +20,13 @@ To add a Linux Command Monitor...
 |Property|Description|
 |-|-|
 |Command|The command or script that SCOM will execute|
-|Monitor Return Code|Controls if the return code from the monitored command/script should be monitored. True|False|
-|Monitor StdOut Numerical Value|Controls if the StdOut from the monitored command/script should be compared as a numerical value. True|False|
-|Collect StdOut|Controls if the StdOut from the monitored command/script should be collected as a performance counter for reports/dashboards. StdOut must be a numerical value. True|False|
+|Monitor Return Code|Controls if the return code from the monitored command/script should be monitored. True\False|
+|Monitor StdOut Numerical Value|Controls if the StdOut from the monitored command/script should be compared as a numerical value. True\False|
+|Collect StdOut|Controls if the StdOut from the monitored command/script should be collected as a performance counter for reports/dashboards. StdOut must be a numerical value. True\False|
 |Expected Return Code|Expected Return Code value. Only takes effect if Return Code is monitored|
 |Expected Minimum StdOut Int Only|Minimum healthy value for StdOut. Only takes effect if StdOut is monitored as a numerical value|
 |Expected Maximum StdOut Int Only|Maximum healthy value for StdOut. Only takes effect if StdOut is monitored as a numerical value|
-|Monitor StdOut Formatted String|Controls if the StdOut from the monitored command/script should be compared as a string. e.g. looking for "Healthy" in the output. True|False|
+|Monitor StdOut Formatted String|Controls if the StdOut from the monitored command/script should be compared as a string. e.g. looking for "Healthy" in the output. True\False|
 |Expected StdOut Formatted String|Regular expression that must be matched for the monitor to be healthy. If there is not match the monitor will be unhealthy. Only takes effect if StdOut is monitored as string|
 
 ## General Properties
