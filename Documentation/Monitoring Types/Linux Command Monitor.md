@@ -31,7 +31,7 @@ To add a Linux Command Monitor...
 
 ## General Properties
 
-|Parameter|Description|
+|Property|Description|
 |-|-|
 |Business Service|The name of the business service that the monitoring is part of|
 |Environment|Which lifecycle environment does the business service belong to. E.g. Production, UAT, DEV, etc...|
