@@ -22,6 +22,7 @@ If creating registry keys and CSVs sounds like too much work for your applicatio
 **_DANGER WILL ROBINSON_**
 
 > The tasks are in optional MPs (Standard.Monitoring.Framework.Windows.Tasks and Standard.Monitoring.Framework.Linux.Tasks) because if your operator roles are not scoped correctly and health services not locked down they could be used to escalate an operators access to the monitored environment. Make sure you understand the risk before importing these MPs.
+> Don’t give operators access to run the tasks on servers if they aren’t administrators of the servers already, otherwise they could use the tasks to give themselves admin access. Consider auditing task execution.  
 
 ## Common Properties
 All SMF monitored objects have these common base properties. 
