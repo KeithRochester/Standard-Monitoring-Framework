@@ -5,7 +5,7 @@ Monitors if a connection to the configured port on the remote address (IP Addres
 
 To add a Linux Port Monitor...
 
-* Create/update **/etc/opt/smf/scom/discovery/linuxport** on the agent that will execute the command. [Example CSV](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/linuxport.csv)
+* Create/update **/etc/opt/smf/scom/discovery/linuxport** on the agent that will execute the command. [Example CSV](../Example%20Files/linuxport.csv)
 * Use the **SMF: Add Port Monitor** task.
 
 ## Linux Port Properties 

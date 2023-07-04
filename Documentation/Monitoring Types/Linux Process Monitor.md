@@ -18,7 +18,7 @@ Metrics that can be collected for dashboards/reports:
 
 To add a Linux Process Monitor...
 
-* Create/update **/etc/opt/smf/scom/discovery/linuxprocess** on the agent that will execute the command. [Example CSV](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/linuxprocess.csv)
+* Create/update **/etc/opt/smf/scom/discovery/linuxprocess** on the agent that will execute the command. [Example CSV](../Example%20Files/linuxprocess.csv)
 * Use the **SMF: Add Process Monitor** task.
 
 ## Linux Process Properties 

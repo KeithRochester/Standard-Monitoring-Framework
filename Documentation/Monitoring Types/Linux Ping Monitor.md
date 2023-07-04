@@ -5,7 +5,7 @@ Pings a remote address (IP Address or FQDN) and changes to an unhealthy state if
 
 To add a Linux Ping Monitor...
 
-* Create/update **/etc/opt/smf/scom/discovery/linuxping** on the agent that will execute the command. [Example CSV](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/linuxping.csv)
+* Create/update **/etc/opt/smf/scom/discovery/linuxping** on the agent that will execute the command. [Example CSV](../Example%20Files/linuxping.csv)
 * Use the **SMF: Add Ping Monitor** task.
 
 ## Linux Ping Properties 

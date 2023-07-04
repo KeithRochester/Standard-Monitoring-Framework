@@ -5,7 +5,7 @@ Monitors the log file for the unhealthy expression using grep or egrep and reset
 
 To add a Linux Time Reset Log File Monitor...
 
-* Create/update **/etc/opt/smf/scom/discovery/linuxtimeresetlogfile** on the agent that will execute the command. [Example CSV](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/linuxtimeresetlogfile.csv)
+* Create/update **/etc/opt/smf/scom/discovery/linuxtimeresetlogfile** on the agent that will execute the command. [Example CSV](../Example%20Files/linuxtimeresetlogfile.csv)
 * Use the **SMF: Add Time Reset Log File Monitor** task.
 
 ## Linux Time Reset Log File Properties 

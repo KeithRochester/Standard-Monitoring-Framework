@@ -5,7 +5,7 @@ Monitors the number of folders older or younger than the defined age threshold i
 
 To add a Windows Folder Age Count Monitor...
 
-* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsFolder** on the agent that will perform the monitoring. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsFolderAgeCount.reg)
+* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsFolder** on the agent that will perform the monitoring. [Example Registry Key](../Example%20Files/WindowsFolderAgeCount.reg)
 * Use the **SMF: Add Folder Age Count Monitor** task.                 
 
 ## Run As Account

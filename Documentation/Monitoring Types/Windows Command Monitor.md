@@ -14,7 +14,7 @@ Can also collect the number returned by StdOut as a performance counter for repo
 
 To add a Windows Command Monitor...
 
-* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsCommand** on the agent that will execute the command. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsCommand.reg)
+* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsCommand** on the agent that will execute the command. [Example Registry Key](../Example%20Files/WindowsCommand.reg)
 * Use the **SMF: Add Command Monitor** task.
 
 ## Run As Account
