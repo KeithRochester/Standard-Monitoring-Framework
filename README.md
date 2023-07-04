@@ -48,7 +48,7 @@ All SMF monitored objects have these common base properties.
 ## What can be monitored right now
 (I am open to suggestions to be added)
 * [Windows Service](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Monitoring%20Types/Windows%20Service%20Monitor.md)
-  * Service is running… recovery to start if automatically if required
+  * Service is running… recovery to restart automatically if required
 * Windows Scheduled Tasks
   * Is the Task enabled
   * Last result
