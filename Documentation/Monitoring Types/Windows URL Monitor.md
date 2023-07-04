@@ -1,6 +1,6 @@
 ﻿
 # SMF: Windows URL Request
-Used to monitor URLs from a Windows watcher. Uses out of the Box URL monitoring.
+Used to monitor URLs from a Windows watcher. Uses out of the box URL monitoring.
 
 Monitors:
 
