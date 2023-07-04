@@ -48,18 +48,18 @@ All SMF monitored objects have these common base properties.
 * Documentation – Link to documentation, link will be included in alert description.
 ## What can be monitored right now
 (I am open to suggestions to be added)
-* [Windows Service](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Monitoring%20Types/Windows%20Service%20Monitor.md)
+* [Windows Service](.//Documentation//Monitoring%20Types/Windows%20Service%20Monitor.md)
   * Service is running… recovery to restart automatically if required
-* Windows Scheduled Tasks
+* [Windows Scheduled Tasks](.//Documentation//Monitoring%20Types/Windows%20Task%20Monitor.md)
   * Is the Task enabled
   * Last result
   * Run duration
   * Time since last run
-* OLEDB Connections and Queries (Windows Watcher)
+* [OLEDB Connections and Queries (Windows Watcher)](.//Documentation//Monitoring%20Types/Windows%20OLEDB%20Monitor.md)
   * Connection is successful
   * Value in the specified row/column of the result set is within thresholds
   * Supports Windows and Local Authentication
-* URL (Windows Watcher)
+* [URL (Windows Watcher)](.//Documentation//Monitoring%20Types/Windows%20URL%20Monitor.md)
   * CA Trusted
   * Certificate Expired
   * Certiifcate Expiring
@@ -70,35 +70,39 @@ All SMF monitored objects have these common base properties.
   * Reachable
   * Response Time
   * Status Code
-* Remote Certificate (Windows Watcher)
+* [Remote Certificate (Windows Watcher)](.//Documentation//Monitoring%20Types/Windows%20Remote%20Certificate%20Monitor.md)
   * CN Valid
   * CA Trusted
   * Certifcate Expired
   * Certifcate Expiring
 * Windows Event Log
-  * Repeated
-  * Missing
-  * Event reset
-  * Time reset
+  * [Repeated](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Repeated%20Event%20Monitor.md)
+  * [Missing](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Missing%20Event%20Monitor.md)
+  * [Event reset](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Event%20Reset%20Monitor.md)
+  * [Time reset](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Time%20Reset%20Monitor.md)
 * Windows Files
-  * Count of files older/younger than threshold above or below threshold
-  * Count of files smaller/larger than threshold above or below threshold
-  * Count of files above or below threshold
+  * [Count of files older/younger than threshold above or below threshold](.//Documentation//Monitoring%20Types/Windows%20File%20Age%20Count%20Monitor.md)
+  * [Count of files smaller/larger than threshold above or below threshold](.//Documentation//Monitoring%20Types/Windows%20File%20Size%20Count%20Monitor.md)
+  * [Count of files above or below threshold](.//Documentation//Monitoring%20Types/Windows%20File%20Count%20Monitor.md)
 * Windows Folder
-  * Count folders older/younger than threshold above or below threshold
+  * [Count folders older/younger than threshold above or below threshold](.//Documentation//Monitoring%20Types/Windows%20Folder%20Age%20Count%20Monitor.md)
 * Linux Log File
-  * Regex is matched in file(s) time reset (tracks previously read lines)
-* Linux Process
+  * [Regex is matched in file(s) time reset (tracks previously read lines)](.//Documentation//Monitoring%20Types/Linux%20Time%20Reset%20Log%20File%20Monitor.md)
+* [Linux Process](.//Documentation//Monitoring%20Types/Linux%20Process%20Monitor.md)
   * Count of process instances within thresholds
   * Percent CPU busy time is below threshold
   * Used Memory KB is below threshold
-* Port (Linux Watcher)
-  * Connection to port remote or local
-* Windows Command – monitor any Windows command
+* TCP Port (Remote/Local)
+  * [Linux Watcher](.//Documentation//Monitoring%20Types/Linux%20Port%20Monitor.md)
+  * [Windows Watcher](.//Documentation//Monitoring%20Types/Windows%20Port%20Monitor.md)
+  * ICMP Ping (Remote/Local)
+  * [Linux Watcher](.//Documentation//Monitoring%20Types/Linux%20Ping%20Monitor.md)
+  * [Windows Watcher](.//Documentation//Monitoring%20Types/Windows%20Ping%20Monitor.md)
+* [Windows Command – monitor the output of any command](.//Documentation/Monitoring%20Types/Windows%20Command%20Monitor.md)
   * Returncode
   * Regular expression match stdout
   * Stdout is between thresholds
-* Linux Command
+* [Linux Command – monitor the output of any command](.//Documentation/Monitoring%20Types/Linux%20Command%20Monitor.md)
   * Returncode
   * Regular expression match stdout
   * Stdout is between thresholds
@@ -106,14 +110,17 @@ All SMF monitored objects have these common base properties.
 Those last two are really powerful and are used like Swiss Army Knives for monitoring. Invariably application SMEs will have admin scripts or executables that we can use to monitor health. By not embeding them into SCOM MPs we can leave the maintenace of them to the application SMEs. Less work for the SCOM SME! 😊
 ## Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
 By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for: 
-* Windows Server OS
-* Linux OS
-* Health Service Watcher
-* Microsoft SQL on Windows Database Engine
-* Microsoft SQL on Windows Database
-* Windows Cluster
-* Windows Cluster Resource Group
-* Any Object - Requires the ObjectId of the object making it slightly more complex to add
+* Windows Server OS - [Example Reg Key](.///Documentation/Example%20Files/WindowsServer.reg)
+* Linux OS - [Example CSV](.///Documentation/Example%20Files/linuxcommand.csv)
+* Health Service Watcher - [Example Reg Key](.///Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
+* Microsoft SQL on Windows Database Engine - [Example Reg Key](.///Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
+* Microsoft SQL on Windows Database - [Example Reg Key](.///Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
+* Windows Cluster - [Example Reg Key](.//Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
+* Windows Cluster Resource Group - [Example Reg Key](.//Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
+* Any Object - Requires the ObjectId of the object making it slightly more complex to add - ###Guide Coming Soon##
+  * [Example Reg Key](.//Documentation/Example%20Files/WindowsGenericObject.reg)
+  * [Example CSV](.//Documentation/Example%20Files/linuxgenericobject.csv)
+
   
 When I get time I’ll add other common objects such as IIS servers, websites, application pools etc...  
 ## What does it look like
