@@ -47,7 +47,7 @@ All SMF monitored objects have these common base properties.
 * Documentation – Link to documentation, link will be included in alert description.
 ## What can be monitored right now
 (I am open to suggestions to be added)
-* Windows Service 
+* [Windows Service](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Monitoring%20Types/Windows%20Service%20Monitor.md)
   * Service is running… recovery to start if automatically if required
 * Windows Scheduled Tasks
   * Is the Task enabled
@@ -118,7 +118,7 @@ When I get time I’ll add other common objects such as IIS servers, websites, a
 ## What does it look like
 The screen capture below shows the diagram view for a simple Business Service created using the SMF.
 
-![Business Services Diagram View](../Documentation/Screencaps/Example%20Business%20Service.png)
+![Business Services Diagram View](.//Documentation/Screencaps/Example%20Business%20Service.png)
 
 ## What’s Next
 Create some example registry keys and CSVs, create a quick start guide, and then start to work through the features and improvements back log… 
