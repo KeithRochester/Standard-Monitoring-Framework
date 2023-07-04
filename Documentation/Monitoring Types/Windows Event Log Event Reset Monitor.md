@@ -5,7 +5,7 @@ Unhealthy event sets state to unhealthy and healthy event sets the state to heal
 
 To add a Windows Event Log Event Reset Monitor...
 
-* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsEventLog** on the agent that will execute the command. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsEventLogEventReset.reg)
+* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsEventLog** on the agent agent where the events will be written. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsEventLogEventReset.reg)
 * Use the **SMF: Add Windows Event Log Time Event Monitor** task.                 
 
 ## Windows Event Log Event Event Properties 

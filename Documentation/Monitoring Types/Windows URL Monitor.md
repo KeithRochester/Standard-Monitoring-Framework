@@ -19,7 +19,7 @@ Monitors:
 
 To add a Windows URL Monitor...
 
-* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsURL** on the agent that will execute the command. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsURL.reg)
+* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsURL** on the agent that will perform the monitoring. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsURL.reg)
 * Use the **SMF: Add URL Monitor** task.                 
 
 ## Run As Account

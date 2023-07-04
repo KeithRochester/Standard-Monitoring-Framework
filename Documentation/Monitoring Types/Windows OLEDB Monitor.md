@@ -13,7 +13,7 @@ Can also collect the query result for dashboards/reports.
 
 To add a Windows OLEDB Monitor...
 
-* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsOLEDB** on the agent that will execute the command. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsOLEDB.reg)
+* Create/update **HKLM:\SOFTWARE\SMF\SCOMDiscoveryData\\##Business Service##\\##Environment##\\WindowsOLEDB** on the agent that will execute the OLEDB connection/query. [Example Registry Key](https://github.com/KeithRochester/Standard-Monitoring-Framework/blob/main/Documentation/Example%20Files/WindowsOLEDB.reg)
 * Use the **SMF: Add OLEDB Connection/Query Monitor** task.
 
 ## Run As Account
