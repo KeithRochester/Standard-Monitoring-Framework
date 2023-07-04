@@ -123,8 +123,6 @@ The screen capture below shows the diagram view for a simple Business Service cr
 ![Business Services Diagram View](.//Documentation/Screencaps/Example%20Business%20Service.png)
 
 ## What’s Next
-Create some example registry keys and CSVs, create a quick start guide, and then start to work through the features and improvements back log… 
-
 Any suggestions/feedback gratefully received or if you want to help improve/fix the MPs get in touch. 
 
 Thanks 
