@@ -1,5 +1,6 @@
 ﻿
 # Windows File Age Count Monitor
+
 Monitors for number of files older/newer than defined threshold.
 
 ## Adding Monitoring
@@ -10,6 +11,7 @@ To add a Windows File Age Count Monitor...
 * Use the **SMF: Add File Age Count Monitor** task.
 
 ## Run As Account
+
 If the agents default action account doesn't have the required access to the files a Windows run as account can be added to the **Standard Monitoring Framework Windows File and Folder Monitoring Profile** run as profile.  
 
 ## Windows File Age Count Properties 

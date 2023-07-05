@@ -1,4 +1,5 @@
 ﻿# Linux Time Reset Log File Monitor
+
 Monitors the log file for the unhealthy expression using grep or egrep and resets back to a healthy state if the expression is not seen for the configured time.
 
 ## Adding Monitoring

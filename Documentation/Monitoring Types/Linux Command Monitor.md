@@ -1,4 +1,5 @@
 # Linux Command Monitor
+
 Used to monitor or collect the output from a Linux Command/Script. 
 
 Can monitor:
@@ -17,6 +18,7 @@ To add a Linux Command Monitor...
 * Use the **SMF: Add Command Monitor** task.
 
 ## Linux Command Properties 
+
 |Property|Description|
 |-|-|
 |Command|The command or script that SCOM will execute|

@@ -1,5 +1,6 @@
 
 # Windows Command Monitor
+
 Used to monitor or collect the output from a Windows Command/Script. 
 
 Can monitor:
@@ -18,6 +19,7 @@ To add a Windows Command Monitor...
 * Use the **SMF: Add Command Monitor** task.
 
 ## Run As Account
+
 If the agents default action account doesn't have the required access to run the command a Windows run as account can be added to the **Standard Monitoring Framework Windows Command Monitoring Profile** run as profile.  
 
 ## Windows Command Properties 

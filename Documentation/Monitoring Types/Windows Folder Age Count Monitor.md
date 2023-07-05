@@ -1,4 +1,5 @@
 ﻿# Windows Folder Age Count Monitor
+
 Monitors the number of folders older or younger than the defined age threshold is within the expected range
 
 ## Adding Monitoring
@@ -9,6 +10,7 @@ To add a Windows Folder Age Count Monitor...
 * Use the **SMF: Add Folder Age Count Monitor** task.                 
 
 ## Run As Account
+
 If the agents default action account doesn't have the required access to the folders a Windows run as account can be added to the **Standard Monitoring Framework Windows File and Folder Monitoring Profile** run as profile.  
 
 ## Windows Folder Age Count Properties 

@@ -1,5 +1,6 @@
 ﻿
 # Windows OLEDB Monitor
+
 OLEDB connection/query based monitoring.
 
 Can monitor:
@@ -17,6 +18,7 @@ To add a Windows OLEDB Monitor...
 * Use the **SMF: Add OLEDB Connection/Query Monitor** task.
 
 ## Run As Account
+
 There are two run as account profiles used by OLEDB monitoring. If basic authentication is used a run as account **must** be associated. If Windows authentication is used then the run as account association is only require if the agent default action account does not have the required access. 
 
 * **Standard Monitoring Framework OLEDB Basic Authentication Profile**

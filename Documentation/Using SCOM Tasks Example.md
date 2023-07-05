@@ -1,4 +1,5 @@
 # **Using The SCOM Agent Tasks to Build a Business Service**
+
 In this example I'll use the Standard Monitoring Framework SCOM agent tasks to create the registry keys and CSV values to create a Business Service based on the following table. This is a very simple example of what can be done, but the basic principal for creating the registry keys and CSV values is the same for all monitoring types, using the SCOM agent tasks.  
 
 |Object|Monitoring Required|
@@ -74,7 +75,7 @@ Confirm the override details and click Run.
 
 Now that the Registry keys and CSV values have been created we can either wait for the discoveries to run (default is every 4 hours) or we can use the **SMF: Trigger Standard Monitoring Discoveries** task, that is targeted at Windows and Unix/Linux Computers
 
-![Trigger Discocveries](./Screencaps/SCOM%20Task%20Deployment%20Example%20013.png)
+![Trigger Discoveries](./Screencaps/SCOM%20Task%20Deployment%20Example%20013.png)
 
 Once the discoveries have run we will be able to see the newly created Business Service in the **Standard Monitoring Framework\All Business Services State View**
 

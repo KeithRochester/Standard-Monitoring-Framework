@@ -1,5 +1,6 @@
 ﻿
 # SMF: Windows URL Request
+
 Used to monitor URLs from a Windows watcher. Uses out of the box URL monitoring.
 
 Monitors:
@@ -23,6 +24,7 @@ To add a Windows URL Monitor...
 * Use the **SMF: Add URL Monitor** task.                 
 
 ## Run As Account
+
 If the agents default action account doesn't have the required access to the URL a run as account can be added to the **Standard Monitoring Framework Windows URL Profile** run as profile. If a proxy server is used and requires authentication is required **Standard Monitoring Framework Windows URL Proxy Profile** can be used.
 
 ## Windows URL Properties 
