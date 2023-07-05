@@ -72,7 +72,7 @@ Confirm the override details and click Run.
 
 ![Add Process Task Confirm](./Screencaps/SCOM%20Task%20Deployment%20Example%20012.png)
 
-Now that the Registry keys and CSV values have been created we can either wait for the discoveries to run (default is every 4 hours) or we can use the **SMF: Trigger Standard Monitoring Disocveries** task, that is targeted at Windows and Unix/Linux Computers
+Now that the Registry keys and CSV values have been created we can either wait for the discoveries to run (default is every 4 hours) or we can use the **SMF: Trigger Standard Monitoring Discoveries** task, that is targeted at Windows and Unix/Linux Computers
 
 ![Trigger Discocveries](./Screencaps/SCOM%20Task%20Deployment%20Example%20013.png)
 

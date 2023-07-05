@@ -12,7 +12,7 @@ The idea for the SMF came from the great work that people like Russ Slaten and T
 * Monitoring configuration becomes part of the application configuration and owned/deployed by application SMEs
 * Monitoring is added to a Business Service for dashboarding/reporting
 * Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
-* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occuring that we don't currently **yet** have monitoring for)
+* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occurring that we don't currently **yet** have monitoring for)
   
 ## An example Windows Service monitoring
 Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
@@ -29,7 +29,7 @@ If creating registry keys and CSVs sounds like too much work for your applicatio
 All SMF monitored objects have these common base properties. 
 * Business Service – Business Service the object is part of.
 * Component – Component the object is part of i.e. back end servers. Components are contained by Business Services and health rolls up. 
-* Environment –  Environment that the object is part of.
+* Environment – Environment that the object is part of.
 * Team – Team that alerts will be routed to.
 * Frequency – How often to run the monitoring.
 * Schedule Start Time – Time to start monitoring i.e. 00:00 or 09:00 etc...
@@ -63,7 +63,7 @@ All SMF monitored objects have these common base properties.
 * [URL (Windows Watcher)](.//Documentation//Monitoring%20Types/Windows%20URL%20Monitor.md)
   * CA Trusted
   * Certificate Expired
-  * Certiifcate Expiring
+  * Certificate Expiring
   * Certificate Invalid
   * Content
   * DNS Resolution
@@ -74,8 +74,8 @@ All SMF monitored objects have these common base properties.
 * [Remote Certificate (Windows Watcher)](.//Documentation//Monitoring%20Types/Windows%20Remote%20Certificate%20Monitor.md)
   * CN Valid
   * CA Trusted
-  * Certifcate Expired
-  * Certifcate Expiring
+  * Certificate Expired
+  * Certificate Expiring
 * Windows Event Log
   * [Repeated](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Repeated%20Event%20Monitor.md)
   * [Missing](.//Documentation//Monitoring%20Types/Windows%20Event%20Log%20Missing%20Event%20Monitor.md)
@@ -108,7 +108,7 @@ All SMF monitored objects have these common base properties.
   * Regular expression match stdout
   * Stdout is between thresholds
 
-Those last two are really powerful and are used like Swiss Army Knives for monitoring. Invariably application SMEs will have admin scripts or executables that we can use to monitor health. By not embeding them into SCOM MPs we can leave the maintenace of them to the application SMEs. Less work for the SCOM SME! 😊
+Those last two are really powerful and are used like Swiss Army Knives for monitoring. Invariably application SMEs will have admin scripts or executables that we can use to monitor health. By not embedding them into SCOM MPs we can leave the maintenance of them to the application SMEs. Less work for the SCOM SME! 😊
 ## Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
 By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for: 
 * Windows Server OS - [Example Reg Key](.///Documentation/Example%20Files/WindowsServer.reg)
