@@ -1,0 +1,246 @@
+﻿{
+  "id": "c801835c-2216-4d20-a90b-3be3ec4a5f0e",
+  "name": "SMF Monitored Object ",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/web-content",
+                    "config": {
+                      "context": {},
+                      "source": {},
+                      "display": {
+                        "height": 90,
+                        "zoom": 1,
+                        "border": false,
+                        "scrolling": false,
+                        "refresh": false,
+                        "src": "",
+                        "content": "<div class='c-table'><div class='c-table-inner'>\n  <div class='c-row'> <div class='c-cell'>Display Name</div><div class='c-cell'><b>{{displayName}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Documentation</div><div class='c-cell'><b>{{properties.documentation}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Description</div><div class='c-cell'><b>{{properties.description}}</b></div></div>\n</div></div>\n"
+                      }
+                    },
+                    "title": "General Properties",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/web-content",
+                    "config": {
+                      "context": {},
+                      "source": {},
+                      "display": {
+                        "height": 95,
+                        "zoom": 1,
+                        "border": false,
+                        "scrolling": false,
+                        "refresh": false,
+                        "src": "",
+                        "content": "<div class='c-table'><div class='c-table-inner'>\n  <div class='c-row'> <div class='c-cell'>Severity</div><div class='c-cell'><b>{{properties.severity}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Priority</div><div class='c-cell'><b>{{properties.priority}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Match Count</div><div class='c-cell'><b>{{properties.matchCount}}</b></div></div>\n</div></div>"
+                      }
+                    },
+                    "title": "Alert Properties",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/web-content",
+                    "config": {
+                      "context": {},
+                      "source": {},
+                      "display": {
+                        "height": 120,
+                        "zoom": 1,
+                        "border": false,
+                        "scrolling": false,
+                        "refresh": false,
+                        "src": "",
+                        "content": "<div class='c-table'><div class='c-table-inner'>\n  <div class='c-row'> <div class='c-cell'>Frequency</div><div class='c-cell'><b>{{properties.frequency}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Start Time</div><div class='c-cell'><b>{{properties.scheduleStartTime}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>End Time</div><div class='c-cell'><b>{{properties.scheduleEndTime}}</b></div></div>\n    <div class='c-row'><div class='c-cell'>Days of the Week (Bit Mask)</div><div class='c-cell'><b>{{properties.scheduleDays}}</b></div></div>\n</div></div>"
+                      }
+                    },
+                    "title": "Schedule Properties",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "objectId": null,
+                          "classId": "6422ea11-7f60-ae59-97ad-eb7100ca3114",
+                          "groupId": "",
+                          "criteria": "Team = '{{properties.team}}'"
+                        },
+                        "stepSummary": ""
+                      },
+                      "display": {
+                        "label": "custom",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "customLabel": "{{properties.team}}"
+                      }
+                    },
+                    "title": "Team",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "parents",
+                          "criteria": "",
+                          "traversalDepth": "recursive",
+                          "classId": "caeac859-1dd0-0a48-1521-3aae7aa6c77e"
+                        },
+                        "stepSummary": "parents"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0
+                      }
+                    },
+                    "title": "Related Business Services",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/hostingstack",
+                    "config": {
+                      "context": {}
+                    },
+                    "description": "",
+                    "title": "Hosting Stack"
+                  },
+                  {
+                    "_type": "tile/monitors",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      },
+                      "source": {
+                        "monitorIds": []
+                      },
+                      "display": {
+                        "healthStates": [
+                          "Warning",
+                          "Error",
+                          "Success"
+                        ],
+                        "monitorGroup": {
+                          "type": "object",
+                          "sort": "default"
+                        }
+                      }
+                    },
+                    "title": "Enabled Monitors",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/text",
+                    "config": {
+                      "display": {
+                        "contentTemplate": "<div class='c-table'><div class='c-table-inner'>{{#each properties}}{{#if (this !== 'undefined') && (@key !== 'objectStatus') && (@key !== 'displayName')}}<div class='c-row'><div class='c-cell'>{{@key.substring(0,1).toUpperCase()}}{{@key.substring(1)}}</div><div class='c-cell'><b>{{.}}</b></div></div>{{/if}}{{/each}}</div></div>"
+                      }
+                    },
+                    "title": "All Properties",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          }
+        ]
+      },
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/allscomperf",
+                    "config": {
+                      "source": {
+                        "aggregateValueType": "max",
+                        "countername": "*",
+                        "objectname": "*",
+                        "resolution": "hourly",
+                        "timeframe": {
+                          "type": "inherit"
+                        }
+                      },
+                      "context": {
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "title": "All Performance Metrics"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 1007,
+  "match": {
+    "type": "scom/object",
+    "classIds": "0c862144-c8b7-ffe4-3939-de5cd010aec1"
+  }
+}

@@ -141,6 +141,8 @@ The screen capture below shows the diagram view for a simple Business Service cr
 
 ![Business Services Diagram View](.//Documentation/Screencaps/Example%20Business%20Service.png)
 
+If you have SquaredUp (and you really should) I've created [dashboards and perspectives](Documentation/SquaredUp/SquaredUp.md)
+
 ## What’s Next
 
 Any suggestions/feedback gratefully received or if you want to help improve/fix the MPs get in touch. 

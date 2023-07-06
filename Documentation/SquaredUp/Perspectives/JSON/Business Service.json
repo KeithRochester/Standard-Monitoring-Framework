@@ -1,0 +1,265 @@
+﻿{
+  "id": "bd38a637-70a6-4132-a477-749a27651b3f",
+  "name": "Business Service",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 20,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "objectId": null,
+                          "classId": "6422ea11-7f60-ae59-97ad-eb7100ca3114",
+                          "groupId": "",
+                          "criteria": "Team = '{{properties.team}}'"
+                        },
+                        "stepSummary": ""
+                      },
+                      "display": {
+                        "label": "custom",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "sublabelCustomLabel": "",
+                        "customLabel": "{{properties.team}}"
+                      }
+                    },
+                    "title": "Team",
+                    "description": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/text",
+                    "config": {
+                      "display": {
+                        "contentTemplate": "<div class='c-table'><div class='c-table-inner'>{{#each properties}}{{#if (this !== 'undefined') && (@key !== 'objectStatus') && (@key !== 'displayName')}}<div class='c-row'><div class='c-cell'>{{@key.substring(0,1).toUpperCase()}}{{@key.substring(1)}}</div><div class='c-cell'><b>{{.}}</b></div></div>{{/if}}{{/each}}</div></div>"
+                      }
+                    },
+                    "description": "",
+                    "title": "Business Service Properties"
+                  }
+                ]
+              }
+            ],
+            "width": 20
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/alert-dateheatmap",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "severities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "priorities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "sources": [
+                          "monitor",
+                          "rule"
+                        ],
+                        "owner": "any",
+                        "states": [
+                          "0",
+                          "247",
+                          "248",
+                          "249",
+                          "250",
+                          "254",
+                          "255"
+                        ],
+                        "timeframe": {
+                          "type": "fixed",
+                          "range": "last30days"
+                        },
+                        "dateProperty": "timeRaised",
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      },
+                      "display": {
+                        "hideWeekends": false,
+                        "hideWeekDays": false,
+                        "hideEmptyRows": true,
+                        "range": "fit",
+                        "shape": ""
+                      }
+                    },
+                    "title": "Alerts Heatmap",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 38
+          }
+        ]
+      },
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      },
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "7b0c9fe5-4491-6601-3e9b-d63cdf47d8dd"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 5,
+                        "height": 5,
+                        "fontsize": 5,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0
+                      }
+                    },
+                    "description": "",
+                    "title": "Components"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/alert-list",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "severities": [
+                          "1",
+                          "2"
+                        ],
+                        "priorities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "sources": [
+                          "monitor",
+                          "rule"
+                        ],
+                        "owner": "any",
+                        "states": [
+                          "-1"
+                        ],
+                        "timeframe": {
+                          "type": "fixed",
+                          "range": "Last30Days"
+                        }
+                      },
+                      "display": {
+                        "limit": 5,
+                        "columns": [
+                          "severity",
+                          "name",
+                          "monitoringObjectDisplayName",
+                          "monitoringObjectPath",
+                          "resolutionStateName",
+                          "timeRaised"
+                        ],
+                        "columnOverrides": {
+                          "monitoringObjectDisplayName": {
+                            "displayName": "display name"
+                          },
+                          "monitoringObjectPath": {
+                            "displayName": "path"
+                          },
+                          "timeRaised": {
+                            "displayName": "raised"
+                          },
+                          "resolutionState": {
+                            "displayName": "state"
+                          },
+                          "resolutionStateName": {
+                            "displayName": "state"
+                          },
+                          "repeatCount": {
+                            "displayName": "repeat count"
+                          },
+                          "lastModified": {
+                            "displayName": "last modified"
+                          },
+                          "lastModifiedBy": {
+                            "displayName": "modified by"
+                          }
+                        },
+                        "fontSize": 14
+                      }
+                    },
+                    "description": "",
+                    "title": "Open Alerts"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 1007,
+  "match": {
+    "type": "scom/object",
+    "classIds": "caeac859-1dd0-0a48-1521-3aae7aa6c77e"
+  }
+}

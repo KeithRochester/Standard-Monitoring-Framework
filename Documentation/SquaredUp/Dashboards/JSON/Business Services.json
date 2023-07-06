@@ -1,0 +1,64 @@
+﻿{
+  "id": "1bc0785f-1542-4634-9914-6f6ab9d807e3",
+  "type": "page/dashboard",
+  "title": "Business Services",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "groupId": "",
+                          "classId": "caeac859-1dd0-0a48-1521-3aae7aa6c77e",
+                          "criteria": ""
+                        },
+                        "extendedProperties": true,
+                        "alerts": true
+                      },
+                      "display": {
+                        "label": "custom",
+                        "columns": 4,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "laststatechange",
+                        "sublabelCustomLabel": "",
+                        "customLabel": "{{displayName}}",
+                        "topn": 0,
+                        "wrapLabel": true,
+                        "sort": {
+                          "property": "healthStateAvailability",
+                          "order": "desc"
+                        }
+                      }
+                    },
+                    "description": "",
+                    "title": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "openAccess": {
+    "enabled": false,
+    "interaction": null,
+    "theme": null
+  }
+}

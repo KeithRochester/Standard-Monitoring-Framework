@@ -1,0 +1,58 @@
+﻿{
+  "id": "bb5890c2-f71f-4bcc-bce8-04746480a765",
+  "type": "page/dashboard",
+  "title": "Teams",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "groupId": "",
+                          "classId": "6422ea11-7f60-ae59-97ad-eb7100ca3114",
+                          "criteria": ""
+                        },
+                        "extendedProperties": true,
+                        "alerts": true
+                      },
+                      "display": {
+                        "label": "custom",
+                        "columns": 5,
+                        "height": 5,
+                        "fontsize": 5,
+                        "sublabel": "none",
+                        "customLabel": "{{name}}",
+                        "sublabelCustomLabel": ""
+                      }
+                    },
+                    "description": "",
+                    "title": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "openAccess": {
+    "enabled": false,
+    "interaction": null,
+    "theme": null
+  }
+}
