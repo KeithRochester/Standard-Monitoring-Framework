@@ -104,7 +104,7 @@ All SMF monitored objects have these common base properties.
 * TCP Port (Remote/Local)
   * [Linux Watcher](.//Documentation//Monitoring%20Types/Linux%20Port%20Monitor.md)
   * [Windows Watcher](.//Documentation//Monitoring%20Types/Windows%20Port%20Monitor.md)
-  * ICMP Ping (Remote/Local)
+* ICMP Ping (Remote/Local)
   * [Linux Watcher](.//Documentation//Monitoring%20Types/Linux%20Ping%20Monitor.md)
   * [Windows Watcher](.//Documentation//Monitoring%20Types/Windows%20Ping%20Monitor.md)
 * [Windows Command – monitor the output of any command](.//Documentation/Monitoring%20Types/Windows%20Command%20Monitor.md)
