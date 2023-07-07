@@ -1,0 +1,270 @@
+﻿{
+  "id": "25fa4be0-eddc-40ea-bafb-d0e2ba3abc33",
+  "name": "Business Service Component",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/web-content",
+                    "config": {
+                      "context": {},
+                      "source": {},
+                      "display": {
+                        "height": 90,
+                        "zoom": 1,
+                        "border": false,
+                        "scrolling": false,
+                        "refresh": false,
+                        "src": "",
+                        "content": "<div class='c-table'><div class='c-table-inner'>\n  <div class='c-row'> <div class='c-cell'>Display Name</div><div class='c-cell'><b>{{displayName}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Environment</div><div class='c-cell'><b>{{properties.environment}}</b></div></div>\n  <div class='c-row'><div class='c-cell'>Business Service</div><div class='c-cell'><b>{{properties.businessService}}</b></div></div>\n</div></div>\n"
+                      }
+                    },
+                    "description": "",
+                    "title": "Properties"
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/alert-dateheatmap",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "severities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "priorities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "sources": [
+                          "monitor",
+                          "rule"
+                        ],
+                        "owner": "any",
+                        "states": [
+                          "0",
+                          "247",
+                          "248",
+                          "249",
+                          "250",
+                          "254",
+                          "255"
+                        ],
+                        "timeframe": {
+                          "type": "fixed",
+                          "range": "last30days"
+                        },
+                        "dateProperty": "timeRaised",
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      },
+                      "display": {
+                        "hideWeekends": false,
+                        "hideWeekDays": false,
+                        "hideEmptyRows": true,
+                        "range": "fit",
+                        "shape": ""
+                      }
+                    },
+                    "title": "Alerts Heatmap",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 50
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "parents",
+                          "traversalDepth": "oneLevel",
+                          "classId": "caeac859-1dd0-0a48-1521-3aae7aa6c77e"
+                        },
+                        "stepSummary": "parents"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0
+                      }
+                    },
+                    "title": "Parent Business Service",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 25
+          }
+        ]
+      },
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "inherit"
+                        }
+                      },
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "55270a70-ac47-c853-c617-236b0cff9b4c"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 5,
+                        "height": 5,
+                        "fontsize": 5,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0
+                      }
+                    },
+                    "description": "",
+                    "title": "Components"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 100,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/alert-list",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "severities": [
+                          "1",
+                          "2"
+                        ],
+                        "priorities": [
+                          "0",
+                          "1",
+                          "2"
+                        ],
+                        "sources": [
+                          "monitor",
+                          "rule"
+                        ],
+                        "owner": "any",
+                        "states": [
+                          "-1"
+                        ],
+                        "timeframe": {
+                          "type": "fixed",
+                          "range": "Last30Days"
+                        }
+                      },
+                      "display": {
+                        "limit": 5,
+                        "columns": [
+                          "severity",
+                          "name",
+                          "monitoringObjectDisplayName",
+                          "monitoringObjectPath",
+                          "resolutionStateName",
+                          "timeRaised"
+                        ],
+                        "columnOverrides": {
+                          "monitoringObjectDisplayName": {
+                            "displayName": "display name"
+                          },
+                          "monitoringObjectPath": {
+                            "displayName": "path"
+                          },
+                          "timeRaised": {
+                            "displayName": "raised"
+                          },
+                          "resolutionState": {
+                            "displayName": "state"
+                          },
+                          "resolutionStateName": {
+                            "displayName": "state"
+                          },
+                          "repeatCount": {
+                            "displayName": "repeat count"
+                          },
+                          "lastModified": {
+                            "displayName": "last modified"
+                          },
+                          "lastModifiedBy": {
+                            "displayName": "modified by"
+                          }
+                        },
+                        "fontSize": 14
+                      }
+                    },
+                    "description": "",
+                    "title": "Open Alerts"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 1007,
+  "match": {
+    "type": "scom/object",
+    "classIds": "7b0c9fe5-4491-6601-3e9b-d63cdf47d8dd"
+  }
+}

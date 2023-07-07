@@ -1,0 +1,338 @@
+﻿{
+  "id": "f73666c3-ec75-40cd-b27e-a2890c39954e",
+  "name": "URL",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "extendedProperties": true,
+                        "alerts": true,
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                        }
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "URL Request",
+                        "countername": "DNS Resolution Time (ms)"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}}"
+                      },
+                      "layers": [
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To First Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Layer",
+                          "description": "no time comparison selected"
+                        },
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To Last Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Clone of Layer",
+                          "description": "no time comparison selected"
+                        }
+                      ]
+                    },
+                    "title": "DNS Resolution Time (ms)",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "URL Request",
+                        "countername": "Download Time (ms)"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}}"
+                      },
+                      "layers": [
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To First Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Layer",
+                          "description": "no time comparison selected"
+                        },
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To Last Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Clone of Layer",
+                          "description": "no time comparison selected"
+                        }
+                      ]
+                    },
+                    "title": "Download Time (ms)",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "URL Request",
+                        "countername": "Response Time"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}}"
+                      },
+                      "layers": [
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To First Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Layer",
+                          "description": "no time comparison selected"
+                        },
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "criteria": "",
+                                "traversalDepth": "oneLevel",
+                                "classId": "34a91f2e-80cc-f436-e1f1-2797f70c7ca9"
+                              }
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "URL Request",
+                              "countername": "Time To Last Byte (ms)"
+                            },
+                            "display": {},
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Clone of Layer",
+                          "description": "no time comparison selected"
+                        }
+                      ]
+                    },
+                    "title": "Response Time (ms)",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "68f0e4c0-36d4-c9a5-c8ae-09c969d7d3f0"
+  }
+}

@@ -1,0 +1,102 @@
+﻿{
+  "id": "32c26ff1-a23a-4d2b-89a8-64cd863010da",
+  "name": "Linux Command",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "extendedProperties": true,
+                        "alerts": true,
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "24d17212-e772-1576-2e13-d520dcdcabcf"
+                        }
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "24d17212-e772-1576-2e13-d520dcdcabcf"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "Command",
+                        "countername": "StdOut"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}}"
+                      }
+                    },
+                    "title": "StdOut",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "c59239f6-6f58-d632-326b-39ac6ded9102"
+  }
+}

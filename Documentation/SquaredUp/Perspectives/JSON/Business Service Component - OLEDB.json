@@ -1,0 +1,199 @@
+﻿{
+  "id": "93d7a6b7-8c70-4150-8cdb-bbb40e06e38b",
+  "name": "OLEDB",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "eb103722-d212-5ead-c5fd-11442f32ee87"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/performance-report",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "eb103722-d212-5ead-c5fd-11442f32ee87"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "source": {
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "OLEDB",
+                        "countername": "Connection Time"
+                      },
+                      "display": {
+                        "range": "fit",
+                        "height": 200,
+                        "showKey": true
+                      },
+                      "layers": [
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "traversalDepth": "oneLevel",
+                                "criteria": "",
+                                "classId": "eb103722-d212-5ead-c5fd-11442f32ee87"
+                              },
+                              "stepSummary": "children"
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "OLEDB",
+                              "countername": "Connection Time"
+                            },
+                            "display": {
+                              "label": "custom",
+                              "customLabel": "{{key.managedEntityPath}} - {{key.instance}} - {{key.counter}}"
+                            },
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Connection Time",
+                          "description": "no time comparison selected"
+                        },
+                        {
+                          "_type": "report-layer-scomlines",
+                          "config": {
+                            "context": {
+                              "scope": {
+                                "type": "children",
+                                "traversalDepth": "oneLevel",
+                                "criteria": "",
+                                "classId": "eb103722-d212-5ead-c5fd-11442f32ee87"
+                              },
+                              "stepSummary": "children"
+                            },
+                            "source": {
+                              "aggregateValueType": "max",
+                              "resolution": "auto",
+                              "customMetricLabel": true,
+                              "metricLabel": "",
+                              "objectname": "OLEDB",
+                              "countername": "Execution Time"
+                            },
+                            "display": {
+                              "label": "custom",
+                              "customLabel": "{{key.managedEntityPath}} - {{key.instance}} - {{key.counter}}"
+                            },
+                            "comparison": {
+                              "type": "none"
+                            }
+                          },
+                          "title": "Execution Time",
+                          "description": "no time comparison selected"
+                        }
+                      ]
+                    },
+                    "title": "Connection and Query Execution Time (ms)",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "eb103722-d212-5ead-c5fd-11442f32ee87"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "OLEDB",
+                        "countername": "Query Result"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityDisplayName}}"
+                      }
+                    },
+                    "title": "Query Result",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "c86e6858-4e6d-2289-53cf-5655f9f5c01c"
+  }
+}

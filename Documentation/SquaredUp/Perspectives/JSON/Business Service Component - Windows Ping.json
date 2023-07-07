@@ -1,0 +1,100 @@
+﻿{
+  "id": "eae66ed0-53e3-4881-bb58-6010e22ef12d",
+  "name": "Windows Ping",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "8f55b279-8919-e6ba-ae7b-a105e121489f"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "8f55b279-8919-e6ba-ae7b-a105e121489f"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "Ping",
+                        "countername": "Response Time (ms)"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "auto",
+                        "showKey": true
+                      }
+                    },
+                    "title": "Response Time (ms)",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "b4cab058-7647-2afa-189a-807f8a2de40d"
+  }
+}

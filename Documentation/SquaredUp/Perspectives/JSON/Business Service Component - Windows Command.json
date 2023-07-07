@@ -1,0 +1,101 @@
+﻿{
+  "id": "478576d7-b12d-433c-878d-1e8e9c34125f",
+  "name": "Business Service Component - Windows Command",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "91646e2e-54cf-dc2e-c83d-854722a9f6fc"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "91646e2e-54cf-dc2e-c83d-854722a9f6fc"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "Command",
+                        "countername": "StdOut"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}}"
+                      }
+                    },
+                    "title": "StdOut",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "bfe52680-1390-2c55-d7bd-ab277f2b90e0"
+  }
+}

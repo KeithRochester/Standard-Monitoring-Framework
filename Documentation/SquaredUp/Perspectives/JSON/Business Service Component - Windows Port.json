@@ -1,0 +1,100 @@
+﻿{
+  "id": "daa48c64-7fac-40b3-b679-455742d77f4e",
+  "name": "Windows Port",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "scope": {
+                          "type": "children",
+                          "traversalDepth": "oneLevel",
+                          "criteria": "",
+                          "classId": "e95bdee8-344e-2baa-d74c-4265c55d29b9"
+                        },
+                        "stepSummary": "children"
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "e95bdee8-344e-2baa-d74c-4265c55d29b9"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "TCP Port",
+                        "countername": "Connection Time (Seconds)"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "auto",
+                        "showKey": true
+                      }
+                    },
+                    "title": "Connection Time (ms)",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "9ae14716-01c5-3810-57f8-7c7f080b6fb4"
+  }
+}

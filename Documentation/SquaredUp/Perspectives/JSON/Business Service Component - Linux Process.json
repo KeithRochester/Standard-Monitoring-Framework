@@ -1,0 +1,170 @@
+﻿{
+  "id": "7ff98481-6259-4966-8e52-00ace1110779",
+  "name": "Linux Process",
+  "content": {
+    "_type": "layout/list",
+    "contents": [
+      {
+        "_type": "layout/column",
+        "columns": [
+          {
+            "width": 15,
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/status-block",
+                    "config": {
+                      "context": {},
+                      "source": {
+                        "extendedProperties": true,
+                        "alerts": true,
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "4219942b-1c86-d4e3-f1c7-4485c34eb190"
+                        }
+                      },
+                      "display": {
+                        "label": "name",
+                        "columns": 1,
+                        "height": 1,
+                        "fontsize": 1,
+                        "sublabel": "healthstatesummary",
+                        "topn": 0,
+                        "wrapLabel": true
+                      }
+                    },
+                    "description": "",
+                    "title": "State"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "_type": "layout/list",
+                "contents": [
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "4219942b-1c86-d4e3-f1c7-4485c34eb190"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "Process",
+                        "countername": "Instance Count"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}} ({{key.instance}})"
+                      }
+                    },
+                    "title": "Instance Count",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "4219942b-1c86-d4e3-f1c7-4485c34eb190"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "",
+                        "objectname": "Process",
+                        "countername": "Used Memory KBytes"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}} ({{key.instance}})"
+                      }
+                    },
+                    "title": "Used Memory KBytes",
+                    "description": ""
+                  },
+                  {
+                    "_type": "tile/scomperf-as-line-graph",
+                    "config": {
+                      "context": {
+                        "scope": {
+                          "type": "children",
+                          "criteria": "",
+                          "traversalDepth": "oneLevel",
+                          "classId": "4219942b-1c86-d4e3-f1c7-4485c34eb190"
+                        }
+                      },
+                      "source": {
+                        "aggregateValueType": "max",
+                        "resolution": "auto",
+                        "timeframe": {
+                          "type": "inherit"
+                        },
+                        "topn": 0,
+                        "customMetricLabel": true,
+                        "metricLabel": "percent",
+                        "objectname": "Process",
+                        "countername": "% Processor Time"
+                      },
+                      "display": {
+                        "range": "zero-fit",
+                        "height": 200,
+                        "label": "custom",
+                        "showKey": true,
+                        "customLabel": "{{key.managedEntityPath}} - {{key.managedEntityDisplayName}} ({{key.instance}})"
+                      }
+                    },
+                    "title": "% Processor Time",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "width": 85
+          }
+        ]
+      }
+    ]
+  },
+  "derivedFrom": "00000000-0000-0000-0000-000000000000",
+  "draft": false,
+  "rank": 507,
+  "match": {
+    "type": "scom/object",
+    "groupIds": "ba27163a-796d-43f4-f714-a025626a1bb3"
+  }
+}
