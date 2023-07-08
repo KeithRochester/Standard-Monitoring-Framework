@@ -1,30 +1,60 @@
-# **Introduction to the Standard Monitoring Framework (SMF)**
+> # Standard Monitoring Framework SCOM MPs
 
-For a while now, I’ve been helping customers implement standardised monitoring in various guises. These management packs help demonstrate the principle. They can be used as a starting point for implementing your own standard monitoring. The MPs have been put together in my personal lab which means they have had limited testing, they should work in your environment, but I can’t be 100% certain for all the supported Unix/Linux distros. Solaris taught me not to assume what works on RHEL works everywhere. ☹ 
+ Easily and quickly deploy business service focused monitoring. Monitoring configuration is stored in the registry for Windows agents and in CSV files for Unix/Linux agents. You can optionally use SCOM Agent tasks to create and update the registry keys and CSV files. 
 
-## **History**
+* [Management Packs](MPs)
+* [Types of Monitoring](<Documentation/Monitoring Types/Monitoring Types.md>)
+* [Using SCOM Tasks Example](<Documentation/Using SCOM Tasks Example.md>)
+* [Example Registry Keys and CSV Files](<Documentation/Example Files>)
+* [SquaredUp Dashboards and Perspectives](Documentation/SquaredUp/SquaredUp.md)
+
+Business services and sub-components health state can be manually set using [SCOM agent tasks](<Documentation/Using SCOM Tasks Example.md>).
+
+# Introduction to the Standard Monitoring Framework (SMF)
+
+For a while now, I’ve been helping customers implement standardised monitoring in various guises. These management packs demonstrate the principle. They can be used as a starting point for implementing your own standard monitoring. The MPs have been put together in my personal lab which means they have had limited testing, they should work in your environment, but I can’t be 100% certain for all the supported Unix/Linux distros. Solaris taught me not to assume what works on RHEL works everywhere. ☹ 
+
+## History
 
 The idea for the SMF came from the great work that people like Russ Slaten and Tyson Paul have done on creating monitoring from configuration files. They both have created MPs that monitor ‘stuff’ by reading/discovering configuration from files. I liked the work they had done, to allow the easy creation of port and URL monitoring without having to use authoring tools, so much I decided to try and apply the same principle to as much monitoring as possible. 
 
 ## Goals
 
-* Set of standardise monitors that target discovered objects
+* Set of standard monitors that target discovered objects
 * Configuration of monitoring stored as properties of objects
 * SCOM objects discovered based on registry keys on Windows and CSVs on Unix/Linux
 * Move monitoring configuration out of SCOM making it easier for application SMEs to ‘own’ their monitoring
 * Reduce the complexity and time to deploy monitoring
-* Monitoring configuration becomes part of the application configuration and owned/deployed by application SMEs
+* Monitoring configuration becomes part of the application configuration and owned and deployed by application SMEs
 * Monitoring is added to a Business Service for dashboarding/reporting
 * Alerts have owner set based on object property (Can be disabled/delayed to avoid conflict with other alert routing processes)
-* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occurring that we don't currently **yet** have monitoring for) - [More info.](<Documentation/Manual Health State.md>)
+* Business Service health state can be manually set (Allows dashboards to be red/amber if an incident is occurring that we don't **yet** have monitoring for) - [More info.](<Documentation/Manual Health State.md>)
   
 ## An example Windows Service monitoring
 
-Instead of an application SME getting in touch with the SCOM SME (me) and asking for a new Windows Service monitor to be authored and implemented for a new service they have created. Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing/fixing. 
-With the SMF, the SME creates a set of registry keys on the servers where the service needs to be monitored describing which Windows service to monitor, when to monitor it, what priority/severity the alerts should be, the team that alerts should be routed to, and which business service the Windows service is part of. SCOM discoveries run and discover the Windows Service to be monitored along with it’s configuration, starts monitoring it, and adds it to the required business service (and discovers the business service). Zero requirement for the SCOM SME to be involved. 
+### Without SMF
+
+* Application SME gets in touch with the SCOM SME (me) asking for a new Windows Service monitor to be authored and implemented for a new service they have created.
+* The request gets added to a back log and eventually scheduled.
+* Even with Kevin Holman’s fragments this takes some time and as it’s a new or updated MP, I’m bound to fat finger something and it’ll need testing and fixing. 
+* Monitoring is deployed and probably forgotten about until the Windows service changes and the process starts again!
+
+### With SMF
+
+* The Application SME creates a set of registry keys on the servers where the service needs to be monitored. Describing:
+  * Which Windows service to monitor.
+  * When to monitor it.
+  * What priority/severity the alerts should be.
+  * The team that alerts should be routed to.
+  * The business service the Windows service is part of.
+* SCOM discoveries run and discover the Windows Service, monitoring configuration, and the business service it is part of.
+* SCOM monitors the service and includes its health in the business service (Visible in the SCOM console and SquaredUp dashboards)
+
+Zero requirement for the SCOM SME to be involved. Other than to encourage application owners to build and review monitoring for their applications. 
+
 If creating registry keys and CSVs sounds like too much work for your application SMEs then to help get started I’ve created [SCOM agent tasks](<Documentation/Using SCOM Tasks Example.md>) that create the keys and CSVs with overridden information. But I really try to push the ownership to the SMEs. The less work I have to do the better! 
 
-**_DANGER WILL ROBINSON_**
+### _DANGER WILL ROBINSON_
 
 > The tasks are in optional MPs (Standard.Monitoring.Framework.Windows.Tasks and Standard.Monitoring.Framework.Linux.Tasks) because if your operator roles are not scoped correctly and health services not locked down they could be used to escalate an operators access to the monitored environment. Make sure you understand the risk before importing these MPs.
 >
@@ -33,8 +63,8 @@ If creating registry keys and CSVs sounds like too much work for your applicatio
 ## Common Properties
 
 All SMF monitored objects have these common base properties. 
-* Business Service – Business Service the object is part of.
-* Component – Component the object is part of i.e. back end servers. Components are contained by Business Services and health rolls up. 
+* Business Service – Business service the object is part of.
+* Component – Component the object is part of i.e. backend servers. Components are contained by business services and health rolls up. 
 * Environment – Environment that the object is part of.
 * Team – Team that alerts will be routed to.
 * Frequency – How often to run the monitoring.
@@ -120,7 +150,7 @@ Those last two are really powerful and are used like Swiss Army Knives for monit
 
 ## Other Existing Monitoring i.e. Microsoft SQL, Windows/Linux OS, Windows Clusters etc…
 
-By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got discoveries for: 
+By setting the required registry keys and CSV entries it’s possible to include the health of other objects in the health of SMF business services. At the moment I’ve got agent tasks and discoveries for: 
 * Windows Server OS - [Example Reg Key](.///Documentation/Example%20Files/WindowsServer.reg)
 * Linux OS - [Example CSV](.///Documentation/Example%20Files/linuxcommand.csv)
 * Health Service Watcher - [Example Reg Key](.///Documentation/Example%20Files/WindowsHealthServiceWatcher.reg)
@@ -137,7 +167,7 @@ When I get time I’ll add other common objects such as IIS servers, websites, a
 
 ## What does it look like
 
-The screen capture below shows the diagram view for a simple Business Service created using the SMF.
+The screen capture below shows the diagram view for a simple business service created using the SMF.
 
 ![Business Services Diagram View](.//Documentation/Screencaps/Example%20Business%20Service.png)
 
