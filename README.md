@@ -1,4 +1,4 @@
-> # Standard Monitoring Framework SCOM MPs
+# Standard Monitoring Framework SCOM MPs
 
  Easily and quickly deploy business service focused monitoring. Configuration is stored in the registry for Windows agents and in CSV files for Unix/Linux agents. You can optionally use SCOM Agent tasks to create and update the registry keys and CSV files. 
 
