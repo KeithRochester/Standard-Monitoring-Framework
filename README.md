@@ -171,7 +171,7 @@ The screen capture below shows the diagram view for a simple business service cr
 
 ![Business Services Diagram View](.//Documentation/Screencaps/Example%20Business%20Service.png)
 
-If you have SquaredUp (and you really should) I've created some If you have SquaredUp (and you really should) I've created some [dashboards](Documentation/SquaredUp/SquaredUp.md#dashboards) and [perspectives](Documentation/SquaredUp/SquaredUp.md#perspectives).
+If you have SquaredUp (and you really should) I've created some [dashboards](Documentation/SquaredUp/SquaredUp.md#dashboards) and [perspectives](Documentation/SquaredUp/SquaredUp.md#perspectives).
 
 ## What’s Next
 
